@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<label> feet </label>
+<input id="footToMeters">
+<button onclick="footToMeters()">kiem tra</button>
+<h3 id="ketQua1">ketqua1:</h3>
+<label>meters</label>
+<input id="meterToFoot">
+<button onclick="meterToFoot()"> kiem tra</button>
+<h3 id="ketQua2">ket qua2:</h3>
+<body>
+<script>
+let meters;
+let foot;
+function footToMeters(){
+   foot= +document.getElementById('footToMeters').value;
+    meters= 0.305*foot;
+    document.getElementById('ketQua1').innerHTML=meters
+}function meterToFoot(){
+   meters= +document.getElementById('meterToFoot').value;
+    foot=3.279*meters;
+    document.getElementById('ketQua2').innerHTML=foot
+}
+</script>
+</body>
+</html>

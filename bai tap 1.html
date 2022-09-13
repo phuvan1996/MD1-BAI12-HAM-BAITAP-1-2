@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <label>kiểm tra số nguyên tố</label>
+    <input id="input" type="text">
+        <button onclick="checkNumber()">kiểm tra</button>
+        <h2 id="result"></h2>
+        <script>
+
+            function SNT(n){
+            let a = 1;
+            if (n <2)
+            return
+            let i = 2;
+            while(i <n){
+            if( n%i===0 ) {
+            a = 0;
+            break;
+        }
+            i++;
+        }
+
+            return a;
+        }
+            function checkNumber() {
+            let n= +document.getElementById('input').value;
+            let i = 0,
+            check=0,
+            result ="";
+            while ( i <= n){
+            check = SNT(i);
+            if( check === 1 ) result += i + " ";
+            ++i;
+        }
+            document.getElementById('result').innerHTML = 'Các số sau đây là số nguyên tố: '+result
+
+        }
+
+</script>
+</body>
